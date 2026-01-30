@@ -4,11 +4,13 @@ import Homepage from "./pages/Homepage"
 import ChiSiamo from "./pages/ChiSiamo"
 import Prodotti from "./pages/Prodotti"
 import DettaglioProdottoSingolo from "./components/DettaglioProdottoSingolo";
+import BudgetProvider from "./contexts/BudgetContext";
 
 
 const App = () => {
  return (
    <>
+   <BudgetProvider>
      <BrowserRouter>
        <Routes>
          <Route element={<DefaultLayout />}>
@@ -21,6 +23,7 @@ const App = () => {
          </Route>
        </Routes>
      </BrowserRouter>
+    </BudgetProvider>
    </>
  )
 }
